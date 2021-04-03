@@ -1,43 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{ 
   background-color: hsl(185, 75%, 39%);
   overflow: hidden;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-.bg-top {
-  position: absolute;
-  right: 750px;
-  bottom: 150px;
-  z-index: -1;
-  /* max-width: 100%; */
-  /* min-width: 375px;
-  max-width: 1440px;
-  height: auto;  */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.bg-bottom {
+
+.bg-image-top, .bg-image-bottom {
   position: absolute;
-  top: 300px;
-  left: 600px;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
-  /* max-width: 100%; */
-  /* left: -320px; */
-  /* transform: translate(650px,300px); */
+}
+
+.bg-image-top {
+  transform: translate(-50%, -50%);
+  background: url('./images/bg-pattern-top.svg') no-repeat bottom
+    right;
+}
+
+.bg-image-bottom {
+  transform: translate(50%, 50%);
+  background: url('./images/bg-pattern-bottom.svg') no-repeat top left;
 }
 
 .card {
   background-color: white;
   max-width: 350px;
-  margin: auto;
   height: 360px;
   border-radius: 15px;
-  /* top: 50%;
-  left:50%; */
 }
 
 .bg-card {
@@ -58,13 +55,13 @@ body{
   margin-top: -45px;
 }
 
-.info-1 {
+.info-name {
   display: inline;
   font-size: 18px;
   font-weight: 700;
 }
 
-.info-2 {
+.info-age {
   display: inline;
   color: hsl(0, 0%, 59%);
   font-size: 18px;
@@ -72,7 +69,7 @@ body{
   padding-left: 5px;
 }
 
-.info-3 {
+.info-country {
   color: hsl(0, 0%, 59%);
   font-size: 14px;
   font-weight: 400;
@@ -90,27 +87,28 @@ body{
   margin: 0px 20px;
 }
 
-.followers, .likes, .photos{
+.data-container{
   width: 33%;
 }
 
-.data-1 {
+.data-count {
   font-size: 18px;
   font-weight: 700;
 }
 
-.data-2 {
+.data-label {
   color: hsl(0, 0%, 59%);
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   line-height: 20px;
 }
 
 .attribution { 
-  font-size: 11px; 
-  text-align: center; 
+  font-size: 11px;
+  margin-top: 20px;
 }
+
 .attribution a { 
   color: hsl(228, 45%, 44%); 
 }
